@@ -7,3 +7,5 @@ change bug file bug branch as b1
 this is for b2
 
 change for b16aldkjsd
+
+this is for coflicting to do that use same file commit on both repo 
