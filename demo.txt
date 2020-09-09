@@ -9,3 +9,7 @@ this is for b2
 change for b16aldkjsd
 
 this is for coflicting to do that use same file commit on both repo 
+
+this is for conflict from local repo
+
+demo file updated as confict from local repo written
