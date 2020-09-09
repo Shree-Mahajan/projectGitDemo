@@ -1,0 +1,1719 @@
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git --version
+git version 2.25.1.windows.1
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git --list
+unknown option: --list
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+credential.helper=manager
+user.name=shrinivas
+user.email=shrinivas@gmail.com
+core.editor=notepad
+gui.recentrepo=F:/persistent training/sessions work/week 2 git/projectGitDemo
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+gui.wmstate=normal
+gui.geometry=1109x563+215+96 216 255
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git log
+commit 68655c0ec27fa632d4fe7d26fdbc281a116fd580 (HEAD -> master)
+Author: shrinivas <shrinivas@gmail.com>
+Date:   Tue Sep 8 16:37:32 2020 +0530
+
+    git perform data stored
+
+commit ac7cddafac7d6ba9f88f64a9c68ef3aa57fbff18
+Author: shrinivas <shrinivas@gmail.com>
+Date:   Tue Sep 8 16:36:14 2020 +0530
+
+    file deleted as demo for upper condition demo
+
+commit 81d8ba0d37543bf80b191f04fb7482a3ad4d61fb
+Author: shrinivas <shrinivas@gmail.com>
+Date:   Tue Sep 8 16:33:20 2020 +0530
+
+    WI4:new file added
+
+commit 61abea460a0be8d5d859e1795b856b2ae741db37
+Author: shrinivas <shrinivas@gmail.com>
+Date:   Tue Sep 8 16:01:28 2020 +0530
+
+    WI3:demo for sfdafdsf
+
+commit 7bfed2ca16541369628467563c400a29925eec94
+Author: shrinivas <shrinivas@gmail.com>
+Date:   Tue Sep 8 15:34:33 2020 +0530
+
+    conf: .gitignore created to skip exe, jar, temp folder
+
+commit 50e714d281d07de224d4557cec83e9ca3fedae50
+Author: shrinivas <shrinivas@gmail.com>
+Date:   Tue Sep 8 14:59:23 2020 +0530
+
+    WI2:afterdemo with text after demo created
+
+commit 7c193b6e1ea00afe4f2fe65ac61efbd03e10b554
+Author: shrinivas <shrinivas@gmail.com>
+Date:   Tue Sep 8 14:49:37 2020 +0530
+
+    WI1:demo file is created with text hello world!
+
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        delete.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git add .
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git commit -m "delete.txt created"
+[master 05fdce5] delete.txt created
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 delete.txt
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    delete.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git rm
+usage: git rm [<options>] [--] <file>...
+
+    -n, --dry-run         dry run
+    -q, --quiet           do not list removed files
+    --cached              only remove from the index
+    -f, --force           override the up-to-date check
+    -r                    allow recursive removal
+    --ignore-unmatch      exit with a zero status even if nothing matched
+
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    delete.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git rm "delete.txt deleted
+> "
+fatal: pathspec 'delete.txt deleted
+' did not match any files
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git commit
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    delete.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git rm
+usage: git rm [<options>] [--] <file>...
+
+    -n, --dry-run         dry run
+    -q, --quiet           do not list removed files
+    --cached              only remove from the index
+    -f, --force           override the up-to-date check
+    -r                    allow recursive removal
+    --ignore-unmatch      exit with a zero status even if nothing matched
+
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git rm "delete.txt"
+rm 'delete.txt'
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    delete.txt
+
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git commit
+hint: Waiting for your editor to close the file... unix2dos: converting file F:/persistent training/sessions work/week 2 git/projectGitDemo/.git/COMMIT_EDITMSG to DOS format...
+dos2unix: converting file F:/persistent training/sessions work/week 2 git/projectGitDemo/.git/COMMIT_EDITMSG to Unix format...
+[master 4740ad4] delete.txt file deleted
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 delete.txt
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git log --oneline
+4740ad4 (HEAD -> master) delete.txt file deleted
+05fdce5 delete.txt created
+68655c0 git perform data stored
+ac7cdda file deleted as demo for upper condition demo
+81d8ba0 WI4:new file added
+61abea4 WI3:demo for sfdafdsf
+7bfed2c conf: .gitignore created to skip exe, jar, temp folder
+50e714d WI2:afterdemo with text after demo created
+7c193b6 WI1:demo file is created with text hello world!
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git revert -- 4740ad4
+hint: Waiting for your editor to close the file... unix2dos: converting file F:/persistent training/sessions work/week 2 git/projectGitDemo/.git/COMMIT_EDITMSG to DOS format...
+dos2unix: converting file F:/persistent training/sessions work/week 2 git/projectGitDemo/.git/COMMIT_EDITMSG to Unix format...
+[master fd3edde] Revert "delete.txt file deleted"
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 delete.txt
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git log --oneline
+fd3edde (HEAD -> master) Revert "delete.txt file deleted"
+4740ad4 delete.txt file deleted
+05fdce5 delete.txt created
+68655c0 git perform data stored
+ac7cdda file deleted as demo for upper condition demo
+81d8ba0 WI4:new file added
+61abea4 WI3:demo for sfdafdsf
+7bfed2c conf: .gitignore created to skip exe, jar, temp folder
+50e714d WI2:afterdemo with text after demo created
+7c193b6 WI1:demo file is created with text hello world!
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git reset --hard fd3edde
+HEAD is now at fd3edde Revert "delete.txt file deleted"
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git log --oneline
+fd3edde (HEAD -> master) Revert "delete.txt file deleted"
+4740ad4 delete.txt file deleted
+05fdce5 delete.txt created
+68655c0 git perform data stored
+ac7cdda file deleted as demo for upper condition demo
+81d8ba0 WI4:new file added
+61abea4 WI3:demo for sfdafdsf
+7bfed2c conf: .gitignore created to skip exe, jar, temp folder
+50e714d WI2:afterdemo with text after demo created
+7c193b6 WI1:demo file is created with text hello world!
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git reset --hard fd3edde4740ad4
+fatal: ambiguous argument 'fd3edde4740ad4': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git log --oneline
+fd3edde (HEAD -> master) Revert "delete.txt file deleted"
+4740ad4 delete.txt file deleted
+05fdce5 delete.txt created
+68655c0 git perform data stored
+ac7cdda file deleted as demo for upper condition demo
+81d8ba0 WI4:new file added
+61abea4 WI3:demo for sfdafdsf
+7bfed2c conf: .gitignore created to skip exe, jar, temp folder
+50e714d WI2:afterdemo with text after demo created
+7c193b6 WI1:demo file is created with text hello world!
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git reset --hard fd3edde
+HEAD is now at fd3edde Revert "delete.txt file deleted"
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git log --oneline
+fd3edde (HEAD -> master) Revert "delete.txt file deleted"
+4740ad4 delete.txt file deleted
+05fdce5 delete.txt created
+68655c0 git perform data stored
+ac7cdda file deleted as demo for upper condition demo
+81d8ba0 WI4:new file added
+61abea4 WI3:demo for sfdafdsf
+7bfed2c conf: .gitignore created to skip exe, jar, temp folder
+50e714d WI2:afterdemo with text after demo created
+7c193b6 WI1:demo file is created with text hello world!
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git reset --hard 4740ad4
+HEAD is now at 4740ad4 delete.txt file deleted
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git log --oneline
+4740ad4 (HEAD -> master) delete.txt file deleted
+05fdce5 delete.txt created
+68655c0 git perform data stored
+ac7cdda file deleted as demo for upper condition demo
+81d8ba0 WI4:new file added
+61abea4 WI3:demo for sfdafdsf
+7bfed2c conf: .gitignore created to skip exe, jar, temp folder
+50e714d WI2:afterdemo with text after demo created
+7c193b6 WI1:demo file is created with text hello world!
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git reset --hard HEAD ~2
+fatal: Cannot do hard reset with paths.
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git log --oneline
+4740ad4 (HEAD -> master) delete.txt file deleted
+05fdce5 delete.txt created
+68655c0 git perform data stored
+ac7cdda file deleted as demo for upper condition demo
+81d8ba0 WI4:new file added
+61abea4 WI3:demo for sfdafdsf
+7bfed2c conf: .gitignore created to skip exe, jar, temp folder
+50e714d WI2:afterdemo with text after demo created
+7c193b6 WI1:demo file is created with text hello world!
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git reset --hard HEAD~2
+HEAD is now at 68655c0 git perform data stored
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git log --oneline
+68655c0 (HEAD -> master) git perform data stored
+ac7cdda file deleted as demo for upper condition demo
+81d8ba0 WI4:new file added
+61abea4 WI3:demo for sfdafdsf
+7bfed2c conf: .gitignore created to skip exe, jar, temp folder
+50e714d WI2:afterdemo with text after demo created
+7c193b6 WI1:demo file is created with text hello world!
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ bit branch
+bash: bit: command not found
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git branch
+* master
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git branch b1
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git branch
+  b1
+* master
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git checkout b1
+Switched to branch 'b1'
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (b1)
+$ git branch
+* b1
+  master
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (b1)
+$ git log --oneline
+68655c0 (HEAD -> b1, master) git perform data stored
+ac7cdda file deleted as demo for upper condition demo
+81d8ba0 WI4:new file added
+61abea4 WI3:demo for sfdafdsf
+7bfed2c conf: .gitignore created to skip exe, jar, temp folder
+50e714d WI2:afterdemo with text after demo created
+7c193b6 WI1:demo file is created with text hello world!
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (b1)
+$ git status
+On branch b1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   demo.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (b1)
+$ commit -am "bug branch: b1: demo file modified with sentence and encryption of change"
+bash: commit: command not found
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (b1)
+$ git commit -am "bug branch: b1: demo file modified with sentence and encryption of change"
+[b1 e029418] bug branch: b1: demo file modified with sentence and encryption of change
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (b1)
+$ git log --oneline
+e029418 (HEAD -> b1) bug branch: b1: demo file modified with sentence and encryption of change
+68655c0 (master) git perform data stored
+ac7cdda file deleted as demo for upper condition demo
+81d8ba0 WI4:new file added
+61abea4 WI3:demo for sfdafdsf
+7bfed2c conf: .gitignore created to skip exe, jar, temp folder
+50e714d WI2:afterdemo with text after demo created
+7c193b6 WI1:demo file is created with text hello world!
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (b1)
+$ git checkout master
+Switched to branch 'master'
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git checkout b1
+Switched to branch 'b1'
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (b1)
+$ git checkout master
+Switched to branch 'master'
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git log --oneline
+68655c0 (HEAD -> master) git perform data stored
+ac7cdda file deleted as demo for upper condition demo
+81d8ba0 WI4:new file added
+61abea4 WI3:demo for sfdafdsf
+7bfed2c conf: .gitignore created to skip exe, jar, temp folder
+50e714d WI2:afterdemo with text after demo created
+7c193b6 WI1:demo file is created with text hello world!
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git merge b1
+Updating 68655c0..e029418
+Fast-forward
+ demo.txt | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git log --oneline
+e029418 (HEAD -> master, b1) bug branch: b1: demo file modified with sentence and encryption of change
+68655c0 git perform data stored
+ac7cdda file deleted as demo for upper condition demo
+81d8ba0 WI4:new file added
+61abea4 WI3:demo for sfdafdsf
+7bfed2c conf: .gitignore created to skip exe, jar, temp folder
+50e714d WI2:afterdemo with text after demo created
+7c193b6 WI1:demo file is created with text hello world!
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ base is no more safe
+bash: base: command not found
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git branch -d b1
+Deleted branch b1 (was e029418).
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git branch
+* master
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git log --oneline
+e029418 (HEAD -> master) bug branch: b1: demo file modified with sentence and encryption of change
+68655c0 git perform data stored
+ac7cdda file deleted as demo for upper condition demo
+81d8ba0 WI4:new file added
+61abea4 WI3:demo for sfdafdsf
+7bfed2c conf: .gitignore created to skip exe, jar, temp folder
+50e714d WI2:afterdemo with text after demo created
+7c193b6 WI1:demo file is created with text hello world!
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ giit branch b2
+bash: giit: command not found
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git branch b2
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git branch
+  b2
+* master
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git checkout b2
+Switched to branch 'b2'
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (b2)
+$ git commit -am "b2branch file created with same code"
+On branch b2
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        b2branch.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (b2)
+$ git status
+On branch b2
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        b2branch.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (b2)
+$ git commit -am "b2branch file created with same code"
+On branch b2
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        b2branch.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (b2)
+$ git commit -am "b2branch file created with same code"
+On branch b2
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        b2branch.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (b2)
+$ git add .
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (b2)
+$ git commit -m "b2branch file created with same code"
+[b2 ca980eb] b2branch file created with same code
+ 1 file changed, 1 insertion(+)
+ create mode 100644 b2branch.txt
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (b2)
+$ git status
+On branch b2
+nothing to commit, working tree clean
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (b2)
+$ git checkout master
+Switched to branch 'master'
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git commit -am "demo modified before b2branch mearge"
+[master 971fdc0] demo modified before b2branch mearge
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git merge b2
+hint: Waiting for your editor to close the file... unix2dos: converting file F:/persistent training/sessions work/week 2 git/projectGitDemo/.git/MERGE_MSG to DOS format...
+dos2unix: converting file F:/persistent training/sessions work/week 2 git/projectGitDemo/.git/MERGE_MSG to Unix format...
+Merge made by the 'recursive' strategy.
+ b2branch.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 b2branch.txt
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git log --oneline
+07a4d86 (HEAD -> master) Merge branch 'b2'
+971fdc0 demo modified before b2branch mearge
+ca980eb (b2) b2branch file created with same code
+e029418 bug branch: b1: demo file modified with sentence and encryption of change
+68655c0 git perform data stored
+ac7cdda file deleted as demo for upper condition demo
+81d8ba0 WI4:new file added
+61abea4 WI3:demo for sfdafdsf
+7bfed2c conf: .gitignore created to skip exe, jar, temp folder
+50e714d WI2:afterdemo with text after demo created
+7c193b6 WI1:demo file is created with text hello world!
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git reset --hard HEAD~2
+HEAD is now at e029418 bug branch: b1: demo file modified with sentence and encryption of change
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git log --oneline
+e029418 (HEAD -> master) bug branch: b1: demo file modified with sentence and encryption of change
+68655c0 git perform data stored
+ac7cdda file deleted as demo for upper condition demo
+81d8ba0 WI4:new file added
+61abea4 WI3:demo for sfdafdsf
+7bfed2c conf: .gitignore created to skip exe, jar, temp folder
+50e714d WI2:afterdemo with text after demo created
+7c193b6 WI1:demo file is created with text hello world!
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git log --oneline
+e029418 (HEAD -> master) bug branch: b1: demo file modified with sentence and encryption of change
+68655c0 git perform data stored
+ac7cdda file deleted as demo for upper condition demo
+81d8ba0 WI4:new file added
+61abea4 WI3:demo for sfdafdsf
+7bfed2c conf: .gitignore created to skip exe, jar, temp folder
+50e714d WI2:afterdemo with text after demo created
+7c193b6 WI1:demo file is created with text hello world!
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git checkout b2
+Switched to branch 'b2'
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (b2)
+$ git checkout master
+Switched to branch 'master'
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git log --online
+fatal: unrecognized argument: --online
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git log --oneline
+e029418 (HEAD -> master) bug branch: b1: demo file modified with sentence and encryption of change
+68655c0 git perform data stored
+ac7cdda file deleted as demo for upper condition demo
+81d8ba0 WI4:new file added
+61abea4 WI3:demo for sfdafdsf
+7bfed2c conf: .gitignore created to skip exe, jar, temp folder
+50e714d WI2:afterdemo with text after demo created
+7c193b6 WI1:demo file is created with text hello world!
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git re
+rebase         remote         replace        reset          revert
+reflog         repack         request-pull   restore
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git rebase
+There is no tracking information for the current branch.
+Please specify which branch you want to rebase against.
+See git-rebase(1) for details.
+
+    git rebase '<branch>'
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=<remote>/<branch> master
+
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git checkout b2
+Switched to branch 'b2'
+M       demo.txt
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (b2)
+$ git rebase master
+error: cannot rebase: You have unstaged changes.
+error: Please commit or stash them.
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (b2)
+$ git rebase
+There is no tracking information for the current branch.
+Please specify which branch you want to rebase against.
+See git-rebase(1) for details.
+
+    git rebase '<branch>'
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=<remote>/<branch> b2
+
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (b2)
+$ git rebase master
+error: cannot rebase: You have unstaged changes.
+error: Please commit or stash them.
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (b2)
+$ git status
+On branch b2
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   demo.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (b2)
+$ git commit -am "b2 modification"
+[b2 8e18fee] b2 modification
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (b2)
+$ git rebase master
+Current branch b2 is up to date.
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (b2)
+$ git checkout master
+Switched to branch 'master'
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git merge b2
+Updating e029418..8e18fee
+Fast-forward
+ b2branch.txt | 1 +
+ demo.txt     | 4 +++-
+ 2 files changed, 4 insertions(+), 1 deletion(-)
+ create mode 100644 b2branch.txt
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git log --oneline
+8e18fee (HEAD -> master, b2) b2 modification
+ca980eb b2branch file created with same code
+e029418 bug branch: b1: demo file modified with sentence and encryption of change
+68655c0 git perform data stored
+ac7cdda file deleted as demo for upper condition demo
+81d8ba0 WI4:new file added
+61abea4 WI3:demo for sfdafdsf
+7bfed2c conf: .gitignore created to skip exe, jar, temp folder
+50e714d WI2:afterdemo with text after demo created
+7c193b6 WI1:demo file is created with text hello world!
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git branch -d b2
+Deleted branch b2 (was 8e18fee).
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git log --oneline
+8e18fee (HEAD -> master) b2 modification
+ca980eb b2branch file created with same code
+e029418 bug branch: b1: demo file modified with sentence and encryption of change
+68655c0 git perform data stored
+ac7cdda file deleted as demo for upper condition demo
+81d8ba0 WI4:new file added
+61abea4 WI3:demo for sfdafdsf
+7bfed2c conf: .gitignore created to skip exe, jar, temp folder
+50e714d WI2:afterdemo with text after demo created
+7c193b6 WI1:demo file is created with text hello world!
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git branch chr
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git checkout chr
+Switched to branch 'chr'
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (chr)
+$ git branch b2
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (chr)
+$ git checkout b2
+Switched to branch 'b2'
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (b2)
+$ git cranch
+git: 'cranch' is not a git command. See 'git --help'.
+
+The most similar command is
+        branch
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (b2)
+$ git branch
+* b2
+  chr
+  master
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (b2)
+$ git rebase master
+error: cannot rebase: You have unstaged changes.
+error: Please commit or stash them.
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (b2)
+$ git -am "b2 modified"
+unknown option: -am
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (b2)
+$ git commit -am "b2 modified"
+[b2 9ce2c68] b2 modified
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (b2)
+$ git rebase master
+Current branch b2 is up to date.
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (b2)
+$ git checkout master
+Switched to branch 'master'
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git merge b2
+Updating 8e18fee..9ce2c68
+Fast-forward
+ b2branch.txt | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git log --oneline
+9ce2c68 (HEAD -> master, b2) b2 modified
+8e18fee (chr) b2 modification
+ca980eb b2branch file created with same code
+e029418 bug branch: b1: demo file modified with sentence and encryption of change
+68655c0 git perform data stored
+ac7cdda file deleted as demo for upper condition demo
+81d8ba0 WI4:new file added
+61abea4 WI3:demo for sfdafdsf
+7bfed2c conf: .gitignore created to skip exe, jar, temp folder
+50e714d WI2:afterdemo with text after demo created
+7c193b6 WI1:demo file is created with text hello world!
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git branch -d b2
+Deleted branch b2 (was 9ce2c68).
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git log --oneline
+9ce2c68 (HEAD -> master) b2 modified
+8e18fee (chr) b2 modification
+ca980eb b2branch file created with same code
+e029418 bug branch: b1: demo file modified with sentence and encryption of change
+68655c0 git perform data stored
+ac7cdda file deleted as demo for upper condition demo
+81d8ba0 WI4:new file added
+61abea4 WI3:demo for sfdafdsf
+7bfed2c conf: .gitignore created to skip exe, jar, temp folder
+50e714d WI2:afterdemo with text after demo created
+7c193b6 WI1:demo file is created with text hello world!
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git sta
+stage    stash    status
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   b2branch.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git conf --list
+git: 'conf' is not a git command. See 'git --help'.
+
+The most similar command is
+        config
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+credential.helper=manager
+user.name=shrinivas
+user.email=shrinivas@gmail.com
+core.editor=notepad
+gui.recentrepo=F:/persistent training/sessions work/week 2 git/projectGitDemo
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+gui.wmstate=normal
+gui.geometry=1109x563+215+96 216 255
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git conf --globally user.email="shreemahajan123@gmail.com"
+git: 'conf' is not a git command. See 'git --help'.
+
+The most similar command is
+        config
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git config --globally user.email="shreemahajan123@gmail.com"
+error: unknown option `globally'
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <>         value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --default <value>     with --get, use default value when missing entry
+
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git config --globally user.email "shreemahajan123@gmail.com"
+error: unknown option `globally'
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <>         value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --default <value>     with --get, use default value when missing entry
+
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git config --global user.email "shreemahajan123@gmail.com"
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+credential.helper=manager
+user.name=shrinivas
+user.email=shreemahajan123@gmail.com
+core.editor=notepad
+gui.recentrepo=F:/persistent training/sessions work/week 2 git/projectGitDemo
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+gui.wmstate=normal
+gui.geometry=1109x563+215+96 216 255
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git config --global user.email "shreemahajan@gmail.com"
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+credential.helper=manager
+user.name=shrinivas
+user.email=shreemahajan@gmail.com
+core.editor=notepad
+gui.recentrepo=F:/persistent training/sessions work/week 2 git/projectGitDemo
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+gui.wmstate=normal
+gui.geometry=1109x563+215+96 216 255
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git log --oneline --decorate --graph
+* 9ce2c68 (HEAD -> master) b2 modified
+* 8e18fee (chr) b2 modification
+* ca980eb b2branch file created with same code
+* e029418 bug branch: b1: demo file modified with sentence and encryption of change
+* 68655c0 git perform data stored
+* ac7cdda file deleted as demo for upper condition demo
+* 81d8ba0 WI4:new file added
+* 61abea4 WI3:demo for sfdafdsf
+* 7bfed2c conf: .gitignore created to skip exe, jar, temp folder
+* 50e714d WI2:afterdemo with text after demo created
+* 7c193b6 WI1:demo file is created with text hello world!
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git tag v1.0
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git log --oneline --decorate --graph
+* 9ce2c68 (HEAD -> master, tag: v1.0) b2 modified
+* 8e18fee (chr) b2 modification
+* ca980eb b2branch file created with same code
+* e029418 bug branch: b1: demo file modified with sentence and encryption of change
+* 68655c0 git perform data stored
+* ac7cdda file deleted as demo for upper condition demo
+* 81d8ba0 WI4:new file added
+* 61abea4 WI3:demo for sfdafdsf
+* 7bfed2c conf: .gitignore created to skip exe, jar, temp folder
+* 50e714d WI2:afterdemo with text after demo created
+* 7c193b6 WI1:demo file is created with text hello world!
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git branch b1
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git checkout b1
+Switched to branch 'b1'
+M       b2branch.txt
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (b1)
+$ git status
+On branch b1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   b2branch.txt
+        modified:   demo.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (b1)
+$ git checkout master
+Switched to branch 'master'
+M       b2branch.txt
+M       demo.txt
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git checkout b1
+Switched to branch 'b1'
+M       b2branch.txt
+M       demo.txt
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (b1)
+$ git checkout master
+Switched to branch 'master'
+M       b2branch.txt
+M       demo.txt
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git remote
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git config --global user.email "shreemahajan123@gmail.com"
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git config --lis
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+credential.helper=manager
+user.name=shrinivas
+user.email=shreemahajan123@gmail.com
+core.editor=notepad
+gui.recentrepo=F:/persistent training/sessions work/week 2 git/projectGitDemo
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+gui.wmstate=normal
+gui.geometry=1109x563+215+96 216 255
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git log --oneline --decorate --graph
+* 9ce2c68 (HEAD -> master, tag: v1.0, b1) b2 modified
+* 8e18fee (chr) b2 modification
+* ca980eb b2branch file created with same code
+* e029418 bug branch: b1: demo file modified with sentence and encryption of change
+* 68655c0 git perform data stored
+* ac7cdda file deleted as demo for upper condition demo
+* 81d8ba0 WI4:new file added
+* 61abea4 WI3:demo for sfdafdsf
+* 7bfed2c conf: .gitignore created to skip exe, jar, temp folder
+* 50e714d WI2:afterdemo with text after demo created
+* 7c193b6 WI1:demo file is created with text hello world!
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git log
+commit 9ce2c683f2619145a248e37df379ff7adfbf5242 (HEAD -> master, tag: v1.0, b1)
+Author: shrinivas <shrinivas@gmail.com>
+Date:   Wed Sep 9 12:42:55 2020 +0530
+
+    b2 modified
+    b2 modified
+
+commit 8e18fee6a9e6c1c8fc2ac7e294dd00305de7fb0b (chr)
+Author: shrinivas <shrinivas@gmail.com>
+Date:   Wed Sep 9 12:36:34 2020 +0530
+
+    b2 modification
+
+commit ca980eb1f02c22a9db372d69ca961948cf7efc16
+Author: shrinivas <shrinivas@gmail.com>
+Date:   Wed Sep 9 12:21:59 2020 +0530
+
+    b2branch file created with same code
+
+commit e0294183944ad5a01e0844dd8b9f0ff9d682b95c
+Author: shrinivas <shrinivas@gmail.com>
+Date:   Wed Sep 9 12:06:21 2020 +0530
+
+    bug branch: b1: demo file modified with sentence and encryption of change
+
+commit 68655c0ec27fa632d4fe7d26fdbc281a116fd580
+Author: shrinivas <shrinivas@gmail.com>
+Date:   Tue Sep 8 16:37:32 2020 +0530
+
+    git perform data stored
+
+commit ac7cddafac7d6ba9f88f64a9c68ef3aa57fbff18
+Author: shrinivas <shrinivas@gmail.com>
+Date:   Tue Sep 8 16:36:14 2020 +0530
+
+    file deleted as demo for upper condition demo
+
+commit 81d8ba0d37543bf80b191f04fb7482a3ad4d61fb
+Author: shrinivas <shrinivas@gmail.com>
+Date:   Tue Sep 8 16:33:20 2020 +0530
+
+    WI4:new file added
+
+commit 61abea460a0be8d5d859e1795b856b2ae741db37
+Author: shrinivas <shrinivas@gmail.com>
+Date:   Tue Sep 8 16:01:28 2020 +0530
+
+    WI3:demo for sfdafdsf
+
+commit 7bfed2ca16541369628467563c400a29925eec94
+Author: shrinivas <shrinivas@gmail.com>
+Date:   Tue Sep 8 15:34:33 2020 +0530
+
+    conf: .gitignore created to skip exe, jar, temp folder
+
+commit 50e714d281d07de224d4557cec83e9ca3fedae50
+Author: shrinivas <shrinivas@gmail.com>
+Date:   Tue Sep 8 14:59:23 2020 +0530
+
+    WI2:afterdemo with text after demo created
+
+commit 7c193b6e1ea00afe4f2fe65ac61efbd03e10b554
+Author: shrinivas <shrinivas@gmail.com>
+Date:   Tue Sep 8 14:49:37 2020 +0530
+
+    WI1:demo file is created with text hello world!
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git remote add origin https://github.com/Shree-Mahajan/projectGitDemo.git
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git remote  -v
+origin  https://github.com/Shree-Mahajan/projectGitDemo.git (fetch)
+origin  https://github.com/Shree-Mahajan/projectGitDemo.git (push)
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git push -u origin master
+ Enumerating objects: 32, done.
+Counting objects: 100% (32/32), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (23/23), done.
+Writing objects: 100% (32/32), 4.81 KiB | 175.00 KiB/s, done.
+Total 32 (delta 8), reused 0 (delta 0)
+remote: Resolving deltas: 100% (8/8), done.
+To https://github.com/Shree-Mahajan/projectGitDemo.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   b2branch.txt
+        modified:   demo.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git -am "jhgjhgjh"
+unknown option: -am
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   b2branch.txt
+        modified:   demo.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git commit -am "jhgjhgjh"
+[master 55a8984] jhgjhgjh
+ 2 files changed, 6 insertions(+), 2 deletions(-)
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ status
+bash: status: command not found
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git push origin master
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 484 bytes | 121.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Shree-Mahajan/projectGitDemo.git
+   9ce2c68..55a8984  master -> master
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git log --online --decorate --graph
+fatal: unrecognized argument: --online
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git log --oneline --decorate --graph
+* 55a8984 (HEAD -> master, origin/master) jhgjhgjh
+* 9ce2c68 (tag: v1.0, b1) b2 modified
+* 8e18fee (chr) b2 modification
+* ca980eb b2branch file created with same code
+* e029418 bug branch: b1: demo file modified with sentence and encryption of change
+* 68655c0 git perform data stored
+* ac7cdda file deleted as demo for upper condition demo
+* 81d8ba0 WI4:new file added
+* 61abea4 WI3:demo for sfdafdsf
+* 7bfed2c conf: .gitignore created to skip exe, jar, temp folder
+* 50e714d WI2:afterdemo with text after demo created
+* 7c193b6 WI1:demo file is created with text hello world!
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   b2branch.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git commit -am "remote repo demo b2branch.txt modified"
+[master ff0c263] remote repo demo b2branch.txt modified
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git log --oneline --decorate --graph
+* ff0c263 (HEAD -> master) remote repo demo b2branch.txt modified
+* 55a8984 (origin/master) jhgjhgjh
+* 9ce2c68 (tag: v1.0, b1) b2 modified
+* 8e18fee (chr) b2 modification
+* ca980eb b2branch file created with same code
+* e029418 bug branch: b1: demo file modified with sentence and encryption of change
+* 68655c0 git perform data stored
+* ac7cdda file deleted as demo for upper condition demo
+* 81d8ba0 WI4:new file added
+* 61abea4 WI3:demo for sfdafdsf
+* 7bfed2c conf: .gitignore created to skip exe, jar, temp folder
+* 50e714d WI2:afterdemo with text after demo created
+* 7c193b6 WI1:demo file is created with text hello world!
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 339 bytes | 113.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Shree-Mahajan/projectGitDemo.git
+   55a8984..ff0c263  master -> master
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git log --oneline --decorate --graph
+* ff0c263 (HEAD -> master, origin/master) remote repo demo b2branch.txt modified
+* 55a8984 jhgjhgjh
+* 9ce2c68 (tag: v1.0, b1) b2 modified
+* 8e18fee (chr) b2 modification
+* ca980eb b2branch file created with same code
+* e029418 bug branch: b1: demo file modified with sentence and encryption of change
+* 68655c0 git perform data stored
+* ac7cdda file deleted as demo for upper condition demo
+* 81d8ba0 WI4:new file added
+* 61abea4 WI3:demo for sfdafdsf
+* 7bfed2c conf: .gitignore created to skip exe, jar, temp folder
+* 50e714d WI2:afterdemo with text after demo created
+* 7c193b6 WI1:demo file is created with text hello world!
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git log --oneline --decorate --graph
+* ff0c263 (HEAD -> master, origin/master) remote repo demo b2branch.txt modified
+* 55a8984 jhgjhgjh
+* 9ce2c68 (tag: v1.0, b1) b2 modified
+* 8e18fee (chr) b2 modification
+* ca980eb b2branch file created with same code
+* e029418 bug branch: b1: demo file modified with sentence and encryption of change
+* 68655c0 git perform data stored
+* ac7cdda file deleted as demo for upper condition demo
+* 81d8ba0 WI4:new file added
+* 61abea4 WI3:demo for sfdafdsf
+* 7bfed2c conf: .gitignore created to skip exe, jar, temp folder
+* 50e714d WI2:afterdemo with text after demo created
+* 7c193b6 WI1:demo file is created with text hello world!
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git fetch
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 752 bytes | 4.00 KiB/s, done.
+From https://github.com/Shree-Mahajan/projectGitDemo
+   ff0c263..792f8b6  master     -> origin/master
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git status
+On branch master
+Your branch is behind 'origin/master' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+nothing to commit, working tree clean
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git log --oneline --decorate --graph
+* ff0c263 (HEAD -> master) remote repo demo b2branch.txt modified
+* 55a8984 jhgjhgjh
+* 9ce2c68 (tag: v1.0, b1) b2 modified
+* 8e18fee (chr) b2 modification
+* ca980eb b2branch file created with same code
+* e029418 bug branch: b1: demo file modified with sentence and encryption of change
+* 68655c0 git perform data stored
+* ac7cdda file deleted as demo for upper condition demo
+* 81d8ba0 WI4:new file added
+* 61abea4 WI3:demo for sfdafdsf
+* 7bfed2c conf: .gitignore created to skip exe, jar, temp folder
+* 50e714d WI2:afterdemo with text after demo created
+* 7c193b6 WI1:demo file is created with text hello world!
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git merge
+Updating ff0c263..792f8b6
+Fast-forward
+ b2branch.txt | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git log --oneline --decorate --graph
+* 792f8b6 (HEAD -> master, origin/master) WI9: b2branch updated by teammate on remote repo
+* ff0c263 remote repo demo b2branch.txt modified
+* 55a8984 jhgjhgjh
+* 9ce2c68 (tag: v1.0, b1) b2 modified
+* 8e18fee (chr) b2 modification
+* ca980eb b2branch file created with same code
+* e029418 bug branch: b1: demo file modified with sentence and encryption of change
+* 68655c0 git perform data stored
+* ac7cdda file deleted as demo for upper condition demo
+* 81d8ba0 WI4:new file added
+* 61abea4 WI3:demo for sfdafdsf
+* 7bfed2c conf: .gitignore created to skip exe, jar, temp folder
+* 50e714d WI2:afterdemo with text after demo created
+* 7c193b6 WI1:demo file is created with text hello world!
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git log --oneline --decorate --graph
+* 792f8b6 (HEAD -> master, origin/master) WI9: b2branch updated by teammate on remote repo
+* ff0c263 remote repo demo b2branch.txt modified
+* 55a8984 jhgjhgjh
+* 9ce2c68 (tag: v1.0, b1) b2 modified
+* 8e18fee (chr) b2 modification
+* ca980eb b2branch file created with same code
+* e029418 bug branch: b1: demo file modified with sentence and encryption of change
+* 68655c0 git perform data stored
+* ac7cdda file deleted as demo for upper condition demo
+* 81d8ba0 WI4:new file added
+* 61abea4 WI3:demo for sfdafdsf
+* 7bfed2c conf: .gitignore created to skip exe, jar, temp folder
+* 50e714d WI2:afterdemo with text after demo created
+* 7c193b6 WI1:demo file is created with text hello world!
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 712 bytes | 4.00 KiB/s, done.
+From https://github.com/Shree-Mahajan/projectGitDemo
+   792f8b6..d5192bf  master     -> origin/master
+Updating 792f8b6..d5192bf
+Fast-forward
+ b2branch.txt | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git log --oneline --decorate --graph
+* d5192bf (HEAD -> master, origin/master) WI9 : created by teammate b2branch
+* 792f8b6 WI9: b2branch updated by teammate on remote repo
+* ff0c263 remote repo demo b2branch.txt modified
+* 55a8984 jhgjhgjh
+* 9ce2c68 (tag: v1.0, b1) b2 modified
+* 8e18fee (chr) b2 modification
+* ca980eb b2branch file created with same code
+* e029418 bug branch: b1: demo file modified with sentence and encryption of change
+* 68655c0 git perform data stored
+* ac7cdda file deleted as demo for upper condition demo
+* 81d8ba0 WI4:new file added
+* 61abea4 WI3:demo for sfdafdsf
+* 7bfed2c conf: .gitignore created to skip exe, jar, temp folder
+* 50e714d WI2:afterdemo with text after demo created
+* 7c193b6 WI1:demo file is created with text hello world!
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   demo.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git commit -am "demo file updated as confict from local repo written"
+[master 226c595] demo file updated as confict from local repo written
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git log --oneline --decorate --graph
+* 226c595 (HEAD -> master) demo file updated as confict from local repo written
+* d5192bf (origin/master) WI9 : created by teammate b2branch
+* 792f8b6 WI9: b2branch updated by teammate on remote repo
+* ff0c263 remote repo demo b2branch.txt modified
+* 55a8984 jhgjhgjh
+* 9ce2c68 (tag: v1.0, b1) b2 modified
+* 8e18fee (chr) b2 modification
+* ca980eb b2branch file created with same code
+* e029418 bug branch: b1: demo file modified with sentence and encryption of change
+* 68655c0 git perform data stored
+* ac7cdda file deleted as demo for upper condition demo
+* 81d8ba0 WI4:new file added
+* 61abea4 WI3:demo for sfdafdsf
+* 7bfed2c conf: .gitignore created to skip exe, jar, temp folder
+* 50e714d WI2:afterdemo with text after demo created
+* 7c193b6 WI1:demo file is created with text hello world!
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git push
+To https://github.com/Shree-Mahajan/projectGitDemo.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/Shree-Mahajan/projectGitDemo.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git fetch
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 755 bytes | 1024 bytes/s, done.
+From https://github.com/Shree-Mahajan/projectGitDemo
+   d5192bf..6f3d413  master     -> origin/master
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git status
+On branch master
+Your branch and 'origin/master' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+nothing to commit, working tree clean
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git pull --rebase
+First, rewinding head to replay your work on top of it...
+Applying: demo file updated as confict from local repo written
+Using index info to reconstruct a base tree...
+M       demo.txt
+Falling back to patching base and 3-way merge...
+Auto-merging demo.txt
+CONFLICT (content): Merge conflict in demo.txt
+error: Failed to merge in the changes.
+hint: Use 'git am --show-current-patch' to see the failed patch
+Patch failed at 0001 demo file updated as confict from local repo written
+Resolve all conflicts manually, mark them as resolved with
+"git add/rm <conflicted_files>", then run "git rebase --continue".
+You can instead skip this commit: run "git rebase --skip".
+To abort and get back to the state before "git rebase", run "git rebase --abort".
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master|REBASE 1/1)
+$ git status
+rebase in progress; onto 6f3d413
+You are currently rebasing branch 'master' on '6f3d413'.
+  (fix conflicts and then run "git rebase --continue")
+  (use "git rebase --skip" to skip this patch)
+  (use "git rebase --abort" to check out the original branch)
+
+Unmerged paths:
+  (use "git restore --staged <file>..." to unstage)
+  (use "git add <file>..." to mark resolution)
+        both modified:   demo.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master|REBASE 1/1)
+$ git log --oneline --decorate --graph
+* 6f3d413 (HEAD, origin/master) chr: demo.txt changes with sentence to perform conflict
+* d5192bf WI9 : created by teammate b2branch
+* 792f8b6 WI9: b2branch updated by teammate on remote repo
+* ff0c263 remote repo demo b2branch.txt modified
+* 55a8984 jhgjhgjh
+* 9ce2c68 (tag: v1.0, b1) b2 modified
+* 8e18fee (chr) b2 modification
+* ca980eb b2branch file created with same code
+* e029418 bug branch: b1: demo file modified with sentence and encryption of change
+* 68655c0 git perform data stored
+* ac7cdda file deleted as demo for upper condition demo
+* 81d8ba0 WI4:new file added
+* 61abea4 WI3:demo for sfdafdsf
+* 7bfed2c conf: .gitignore created to skip exe, jar, temp folder
+* 50e714d WI2:afterdemo with text after demo created
+* 7c193b6 WI1:demo file is created with text hello world!
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master|REBASE 1/1)
+$ git add .
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master|REBASE 1/1)
+$ git status
+rebase in progress; onto 6f3d413
+You are currently rebasing branch 'master' on '6f3d413'.
+  (all conflicts fixed: run "git rebase --continue")
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   demo.txt
+
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master|REBASE 1/1)
+$ git rebase --continue
+Applying: demo file updated as confict from local repo written
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git log --oneline --decorate --graph
+* 0a8ac0d (HEAD -> master) demo file updated as confict from local repo written
+* 6f3d413 (origin/master) chr: demo.txt changes with sentence to perform conflict
+* d5192bf WI9 : created by teammate b2branch
+* 792f8b6 WI9: b2branch updated by teammate on remote repo
+* ff0c263 remote repo demo b2branch.txt modified
+* 55a8984 jhgjhgjh
+* 9ce2c68 (tag: v1.0, b1) b2 modified
+* 8e18fee (chr) b2 modification
+* ca980eb b2branch file created with same code
+* e029418 bug branch: b1: demo file modified with sentence and encryption of change
+* 68655c0 git perform data stored
+* ac7cdda file deleted as demo for upper condition demo
+* 81d8ba0 WI4:new file added
+* 61abea4 WI3:demo for sfdafdsf
+* 7bfed2c conf: .gitignore created to skip exe, jar, temp folder
+* 50e714d WI2:afterdemo with text after demo created
+* 7c193b6 WI1:demo file is created with text hello world!
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 391 bytes | 130.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Shree-Mahajan/projectGitDemo.git
+   6f3d413..0a8ac0d  master -> master
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Shree@SHREE MINGW64 /f/persistent training/sessions work/week 2 git/projectGitDemo (master)
+$
